@@ -1,0 +1,45 @@
+name: Deploy My Portfolio.
+
+on:
+  pull_request:
+    branches:
+      - main
+
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy-beta:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Display PR info
+        run: |
+          echo "Pull Request #${{ github.event.pull_request.number }}"
+          echo "Head branch: ${{ github.head_ref }}"
+          echo "Base branch: ${{ github.event.pull_request.base.ref }}"
+
+      - name: Run required files check
+        run: |
+          python tests/test_check_required_files.py
+
+      - name: Configure AWS credentials
+        if: steps.run_required_files_check.outcome == 'success'
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Debug AWS Identity
+        if: steps.run_required_files_check.outcome == 'success'
+        run: |
+          aws sts get-caller-identity || echo "No credentials"
+          env | grep AWS
+
+      
