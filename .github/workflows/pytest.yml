@@ -29,13 +29,10 @@ jobs:
           # If you have a dev requirements file for testing, include it
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-  #    - name: Run unit tests
-  #      run: |
-  #        pytest -v --maxfail=1 --disable-warnings -q
-  #      working-directory: portfolio-site
-
-
-        
+      - name: Run unit tests
+        run: |
+          pytest -v --maxfail=1 --disable-warnings -q
+        working-directory: portfolio-site
 
   deploy:
     name: Deploy to S3
