@@ -31,7 +31,7 @@ jobs:
 
       - name: Run unit tests
         run: |
-          python -m pytest -v --maxfail=1 --disable-warnings -q
+          pytest -v --maxfail=1 --disable-warnings -q
         working-directory: portfolio-site
 
 
