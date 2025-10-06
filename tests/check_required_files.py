@@ -2,8 +2,7 @@
 import sys
 import json
 from pathlib import Path
-
-import yaml  # requires PyYAML
+import yaml # requires 
 
 def load_required_from_yaml(config_path: Path) -> list[str] | None:
     """
