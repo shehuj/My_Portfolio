@@ -27,7 +27,7 @@ def test_page_exists_and_content(tmp_path, filename, expectations):
     """
     Check that the page file exists in the build directory and has expected title and content.
     """
-    site-root = /portfolio-site
+    site_root = os.path.join(os.getcwd(), 'portfolio-site')  # Replace 'site' with the actual folder name if different
     # You should set your build or output folder; here I assume the pages are in project root or in `site/`
     # For example, if your built site is in 'site/' folder:
     page_path = os.path.join(site_root, 'portfolio-site', filename)
