@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup  # you’ll need to install beautifulsoup4 for par
 PAGES = {
     "index.html": {
         "title": "Jenom Shehu — About",
-        "must_contain": ["About Me", "DevOps / Site Reliability Engineer", "Contact", "View Resume"]
+        "must_contain": ["DevOps / Site Reliability Engineer — Cloud-native infrastructure, IaC, CI/CD, Observability"]
     },
     "resume.html": {
         "title": "Resume — Jenom Shehu",
