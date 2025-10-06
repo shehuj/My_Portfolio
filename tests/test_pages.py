@@ -32,7 +32,7 @@ def test_page_exists_and_content(tmp_path, filename, expectations):
     # For example, if your built site is in 'site/' folder:
     page_path = os.path.join(site_root, 'portfolio-site', filename)
     #site_root = os.getcwd()  # or replace with path to your built folder
-    page_path = os.path.join(site_root, filename)
+    ##page_path = os.path.join(site_root, filename)
     assert os.path.isfile(page_path), f"Expected page file not found: {page_path}"
     
     # Read the file
