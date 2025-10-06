@@ -1,4 +1,4 @@
-name: Deploy Lambda to Beta
+name: Deploy My Portfolio.
 
 on:
   pull_request:

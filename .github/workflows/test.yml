@@ -40,6 +40,10 @@ jobs:
       run: |
           python tests/check_required_files.py
   #        python tests/test_required_files.py
+    
+    - name: Test with pytest
+      run: |
+        pytest tests/
 
     - name: Run unit tests
       run: pytest -v --maxfail=1 --disable-warnings -q
