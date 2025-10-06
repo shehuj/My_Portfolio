@@ -32,7 +32,6 @@ jobs:
       - name: Run unit tests
         run: |
           pytest -v --maxfail=1 --disable-warnings -q
-        working-directory: tests
 
   deploy:
     name: Deploy to S3
