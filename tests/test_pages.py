@@ -29,7 +29,8 @@ def test_page_exists_and_content(tmp_path, filename, expectations):
     """
     # You should set your build or output folder; here I assume the pages are in project root or in `site/`
     # For example, if your built site is in 'site/' folder:
-    site_root = os.getcwd()  # or replace with path to your built folder
+    site_root = /portfolio-site/assests
+#  site_root = os.getcwd()  # or replace with path to your built folder
     page_path = os.path.join(site_root, filename)
     assert os.path.isfile(page_path), f"Expected page file not found: {page_path}"
     
