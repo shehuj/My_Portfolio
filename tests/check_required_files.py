@@ -65,7 +65,7 @@ def main():
             ".gitignore",
             "requirements.txt",
             "portfolio-site/resume.html",
-            "portfolio-site/index.html
+            "portfolio-site/index.html"
             # add others you need
         ]
 
