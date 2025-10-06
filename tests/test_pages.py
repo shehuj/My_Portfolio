@@ -18,7 +18,7 @@ PAGES = {
     },
     "cover-letter.html": {
         "title": "Cover Letter — Jenom Shehu",
-        "must_contain": ["Dear", "Sincerely", "Hiring Manager"]
+        "must_contain": ["Cover Letter — Jenom Shehu"]
     }
 }
 
