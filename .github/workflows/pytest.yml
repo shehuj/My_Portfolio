@@ -56,8 +56,12 @@ jobs:
           # adjust source_directory to where your built site is (if you “build” to a folder)
           aws s3 sync . s3://jenomshehu-portfolio/ --delete --acl public-read
 
-      - name: Invalidate CloudFront cache (optional, if using CloudFront)
-        uses: chetan/invalidate-cloudfront-action@v2
+      - name: Invalidate CloudFront Cache
+        uses: aws-actions/cloudfront-invalidate@v1
         with:
-          distribution: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
-          paths: "/*"
+            distribution-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+            invalidate-paths: "/index.html, /about.html"
+            aws-region: "us-east-1"
+        env:
+            AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
