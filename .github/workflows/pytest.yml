@@ -32,7 +32,7 @@ jobs:
       - name: Run unit tests
         run: |
           python -m pytest -v --maxfail=1 --disable-warnings -q
-        working-directory: ./My_Portfolio/portfolio-site
+        working-directory: portfolio-site
 
 
         
