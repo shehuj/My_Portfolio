@@ -2,3 +2,6 @@ required_files:
   - .gitignore
   - README.md
   - requirements.txt
+  - portfolio-site/resume.html
+  - portfolio-site/index.html
+  

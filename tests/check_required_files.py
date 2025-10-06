@@ -64,8 +64,8 @@ def main():
             "README.md",
             ".gitignore",
             "requirements.txt",
-            "lambda_function_foundational.py",
-            "lambda_function_advance.py",
+            "portfolio-site/resume.html",
+            "portfolio-site/index.html
             # add others you need
         ]
 
